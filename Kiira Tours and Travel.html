@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiira Tours and Travel</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #004d40;
+      color: #fff;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image:(images/bridge areal.jpg) 
+      display: flex;
+      justify-content:left;
+      align-items:center;
+      text-align:center;
+      color: yellow;
+      padding: 70px;
+      background-image: url('images/bridge areal.jpg');
+      background-size: cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      height:30rem;
+      max-width: 100%;
+      position: relative;
+        }
+
+        .hero::before {
+     
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(3, 3, 3, 0.5); /* 100% black overlay */
+      z-index: 1;
+      
+        }
+        
+
+        .hero > div {
+      position: relative;
+      z-index: 2;
+        }
+      
+    }
+
+    .hero h2 {
+      
+      margin-top: auto;
+      margin-bottom: auto;
+      color:orange;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      margin-top: 50px;
+      font-size: 12rem;
+      padding: 20px;
+    }
+
+    .hero button {
+      background: #ffcc00;
+      color: #333;
+      padding: 12px 25px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background: #f38b03;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .about img {
+      flex: 1;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h2 {
+      color: #004d40;
+      margin-bottom: 15px;
+    }
+
+    .packages {
+      text-align: center;
+    }
+
+    .packages h2 {
+      margin-bottom: 40px;
+      color: #004d40;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .package {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f9f9f9;
+      transition: transform 0.3s;
+    }
+
+    .package:hover {
+      transform: translateY(-5px);
+    }
+
+    .package img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .package h3 {
+      padding: 15px;
+      color: #333;
+    }
+
+    .package p {
+      padding: 0 15px 20px;
+      color: #555;
+    }
+
+    /* Booking Form */
+    .booking {
+      background: #f1f1f1;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .booking h2 {
+      margin-bottom: 20px;
+      color: #004d40;
+      text-align: center;
+    }
+
+    .booking form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .booking input,
+    .booking select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .booking button {
+      background: #004d40;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .booking button:hover {
+      background: #00695c;
+    }
+
+    /* Footer */
+    footer {
+      background: #004d40;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer .socials {
+      margin: 10px 0;
+    }
+
+    footer .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>KIIRA TOURS AND TRAVEL</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#destinations">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" >
+    <div class="overlay">  
+     <div> 
+       <h2 style="font-size: 3.5rem;">Discover Jinja with Kiira Tours <br>Your Gateway to Adventure!</h2>
+       <button onclick="location.href='#contact'">Book Now</button>
+      </div>
+    </div>     
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="images/boy.jpg" alt="About Us">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        At Kiira Tours and Travel, we bring you the best of Jinja  from thrilling adventure tours 
+        and breathtaking River Nile boat cruises to cultural experiences and visits to the famous Source of the Nile. 
+        Our mission is to create unforgettable memories with professional service and warm Ugandan hospitality.
+      </p>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section id="destinations" class="packages">
+    <h2>Our Packages</h2>
+    <div class="package-grid">
+      <div class="package">
+        <img src="images/town side view.jpg" alt="Adventure Tours">
+        <h3>Adventure Tours</h3>
+        <p>Experience adrenaline-packed activities such as white-water rafting and bungee jumping along the River Nile.</p>
+      </div>
+      <div class="package">
+        <img src="images/cruise.jpg" alt="Boat Cruises">
+        <h3>River Nile Boat Cruises</h3>
+        <p>Relax and enjoy the serene beauty of the Nile with our guided boat cruises that showcase wildlife and scenery.</p>
+      </div>
+      <div class="package">
+        <img src="images/Source-of-river-Nile-750x450.jpg" alt="Source of the Nile">
+        <h3>Source of the Nile Visits</h3>
+        <p>Explore the legendary Source of the Nile and immerse yourself in one of the world’s greatest natural wonders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="contact" class="booking">
+    <h2>Book Your Tour</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Your Phone" required>
+      <select required>
+        <option value="">Select Tour Package</option>
+        <option>Adventure Tours</option>
+        <option>River Nile Boat Cruise</option>
+        <option>Source of the Nile Visit</option>
+        <option>Cultural Experience</option>
+      </select>
+      <input type="date" placeholder="Arrival Date" required>
+      <input type="date" placeholder="Departure Date" required>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kiira Tours and Travel. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="https://facebook.com" aria-placeholder="facebook" target="_blank" rel="noopener">
+        <img src="images/facebook.png" alt="Facebook" style="height:1.2rem;vertical-align:middle;" aria-label="Facebook"> <!-- Facebook icon -->    
+        
+      <a href="https://twitter.com"  target="_blank" rel="noopener">
+        <img src="images/twitter.png" alt="Twitter" style="height:1.2rem;vertical-align:middle;" > <!-- Twitter icon -->
+      </a>
+      <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener">
+     <img src="images/tiktok.png" alt="TikTok" style="height:1.2rem;vertical-align:middle;"> <!-- TikTok icon -->
+      </a>
+      <a href="https://linkedin.com"  target="_blank" rel="noopener">        
+        <img src="images/linkedin.png" alt="LinkedIn" style="height:2rem;vertical-align:middle;" aria-label="LinkedIn"> <!-- LinkedIn icon -->
+      </a>
+      
+    </div>
+  </footer>
+
+</body>
+</html>
